@@ -2,7 +2,7 @@
 package main
 import "fmt"  // format package -- provides formatting for I/O -- pronunciated as 'fimt'
 func main()  {  // main function
-	fmt.Println("Hello, World!") 
+	fmt.Println("Hello, World!")
 }
 
 

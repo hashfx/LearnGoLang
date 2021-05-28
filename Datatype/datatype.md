@@ -1,6 +1,27 @@
 # Data Type in GoLang
 
 + ## Boolean
+
+  + ### true
+  + ### false
+
+```go
+func main(){
+    n := 1 == 1
+    m := 1 == 2 
+    fmt.Printf("%v, %T", n, n)  // true, bool
+    fmt.Printf("%v, %T", m, m)  // false, bool
+
+}
+```
+
+### If **boolean variable** is initialized without any value, it's default value is *false*
+
+```go
+var n bool
+fmt.Printf("%v, %T", n, n)  // Output: false, bool
+```
+
 + ## Numeric Datatype
 
 <details>
@@ -146,4 +167,61 @@
 
 + ## String
 
-+ ## Derived
+```go
+// Strings in GoLang
+s := "A String"  // double-quotes for Strings
+b := []byte(s)  // converted to byte >> would output ASCII values of characters
+fmt.Printf("%v, %T", b, b)  // Output: [65 32 83 116 114 105 110 103], []uint8
+
+// Characters in GoLang
+r := 'a'  // single-quotes for Character  # same-as: var r rune = 'a'
+fmt.Printf("%v, %T", r, r)  // Output: 97, int32  # ASCII value of 'a'
+```
+
+<!-- + ## Derived -->
+
+## Summary
+
++ ## Boolean
+  + ### Values are **true** or **false**
+	+ ### Zero value is **false** as well as **default**
+
++ ## Numeric
+
+  + ## Integer
+
+	  + ### Signed Integer
+		  + ### int type has varying size, but minium 32 bits
+		  + ### Range: 8 bit (int 8) to 64 bit (int64)
+	  + ### Unsigned Integer
+		  + ### Range: 8 bit (byte and uint8) to 32 bit (uint32)
+	  + ### Arithmetic operations can be performed on same data-type ({int to int}, {float32 to float32})
+	  + ### Can't mix types in same family **(uint16 + uint32 = error)**
+
+  + ## Float
+	  + ### Follows **IEEE-754 standard**
+		+ ### 32 bit and 64 bit versions
+		+ ### Literal Style
+		  + ### Decimal (3.14)
+		  + ### Exponential (13e18 or 2E10)
+		  + ### Mixed (13.7e12)
+
+  + ## Complex
+    + ### Zero Value (0+0i)
+    + ### 64 bit and 128 bit versions
+    + ### Built-in functions
+      + ### **complex** : make complex number from two floats
+      + ### **real** : get real part as float
+      + ### **imag** : get imaginary part as float
+
+  + ## Text Type
+	  + ## Strings
+		  + ### UTF-8
+		  + ### Immutable
+		  + ### Can be concatenated with **plus(+)** operator
+		  + ### can be converted to **[ ]byte**
+	  + ## Rune
+		  + ### UTF-32
+		  + ### Alias for **int32**
+		  + ### Special methods normally required to process
+		    + ### e.g.: strings.Reader#ReadRune
