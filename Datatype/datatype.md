@@ -224,4 +224,4 @@ fmt.Printf("%v, %T", r, r)  // Output: 97, int32  # ASCII value of 'a'
 		  + ### UTF-32
 		  + ### Alias for **int32**
 		  + ### Special methods normally required to process
-		    + ### e.g.: strings.Reader#ReadRune
+		    + ### e.g.: strings.Reader#ReadRunet
