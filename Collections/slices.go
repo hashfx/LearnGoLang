@@ -1,47 +1,9 @@
 package main
-
-import (
+import(
 	"fmt"
 )
 
-func main() {
-	fmt.Println("Arrays in GoLang")
-
-	// array_name := [size_of_array]datatype_of_array{values of array}
-
-	marks := [5]int{10, 20, 30, 40, 50}
-	cgpa := [...]int{10, 9, 8, 7, 9} // creates an array thats large enough to hold the data passed to array
-	var students [3]string           // Empty array of size 3 and datatype string
-
-	fmt.Printf("Marks: %v\n", marks)
-	fmt.Printf("CGPA: %v\n", cgpa)
-	fmt.Printf("Empty Array: %v\n", students)
-	// assigning values to array students
-	students[0] = "Alpha"
-	students[1] = "Beta"
-	students[2] = "Gamma"
-	fmt.Printf("Students: %v\n", students)
-	fmt.Printf("Student at index 1: %v\n", students[1])
-	fmt.Printf("Number of Students: %v\n", len(students))
-
-	// Array of Arrays
-	fmt.Println("Identity Matrix")
-
-	var identityMatrix [3][3]int
-	identityMatrix[0] = [3]int{1, 0, 0}
-	identityMatrix[1] = [3]int{0, 1, 0}
-	identityMatrix[2] = [3]int{0, 0, 1}
-	// var identityMatrix [3][3]int = [3][3]int{ [3]int{1, 0, 0}, [3]int{0, 1, 0}, [3]int{0, 0, 1}}  // same output as above code
-	fmt.Println(identityMatrix)
-
-	a := [...]int{1, 2, 3}
-	b := a // not copying array 'a' to 'b' but creating a different array 'b' with index[1] as 5
-	// b := &a  // copies array 'a' to array 'b'; output: Array(a): [1 5 3] Array(b): [1 5 3]
-	b[1] = 5 // changed 2nd element of array 'a' to 5
-	fmt.Printf("Array(a): %v\n", a)
-	fmt.Printf("Array(b): %v\n", b)
-
-	/* Slice
+func main(){
 	c := [...]int{10, 20, 30, 40, 50, 60, 70, 80, 90, 100}
 	// c := []int{10, 20, 30, 40, 50, 60, 70, 80, 90, 100}  // slicing would work for undeclared size arrays too
 	d := c[:]                            // slice of all elements
@@ -78,7 +40,7 @@ func main() {
 	fmt.Printf("Length: %v\n", len(k))
 	fmt.Printf("Capacity: %v\n", cap(k))
 
-	// Stack Operations in Slice
+	/* Stack Operations in Slice */
 	fmt.Println("Stack Operations in Slices")
 
 	l := []int{90, 80, 70, 60, 50}
@@ -86,7 +48,4 @@ func main() {
 	// n := l[:len(l)-1]  // removes last element from the slice  // [90 80 70 60]
 	// o := append(l[:2], l[3:]...)  // remove an element from the middle by concatinating two slices together  // [90 80 60 50]
 	fmt.Println(l)
-	
-	*/
-
-}
+}	
