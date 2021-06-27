@@ -41,7 +41,7 @@ func main() {
 	fmt.Printf("Array(a): %v\n", a)
 	fmt.Printf("Array(b): %v\n", b)
 
-	/* Slice
+	/* Slice : covered in slices.go
 	c := [...]int{10, 20, 30, 40, 50, 60, 70, 80, 90, 100}
 	// c := []int{10, 20, 30, 40, 50, 60, 70, 80, 90, 100}  // slicing would work for undeclared size arrays too
 	d := c[:]                            // slice of all elements
